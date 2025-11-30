@@ -312,10 +312,13 @@ export default function QRScannerPayment() {
                 onTouchEnd={(e) => e?.preventDefault()}
                 onMouseDown={(e) => e?.preventDefault()}
                 disabled={isProcessing}
-                className="inline-flex items-center justify-center p-2 hover:bg-gray-100 active:bg-gray-200 rounded-lg transition duration-200 disabled:opacity-50 cursor-pointer touch-none"
+                className="inline-flex items-center justify-center p-2 hover:bg-gray-100 active:bg-gray-200 rounded-lg transition duration-200 disabled:opacity-50 cursor-pointer touch-none border border-gray-300 ml-80 z-50 "
                 title="Scan QR Code for Payment"
             >
-                <QrCode className="w-6 h-6 text-gray-700" strokeWidth={1.5} />
+                <div className="flex flex-col items-center space-y-1">
+                    <QrCode className="w-14 h-14 text-gray-700" strokeWidth={1.5} />
+                    <p className="text-sm font-semibold text-gray-700">Scan & Pay</p>
+                </div>
             </button>
         );
     }

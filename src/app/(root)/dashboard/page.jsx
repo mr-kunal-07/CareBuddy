@@ -1,7 +1,7 @@
 "use client";
 
 import QRScannerPayment from "@/components/qr";
-import { Scan, ScanQrCode } from "lucide-react";
+import { Scan, ScanQrCode, Share, ShareIcon } from "lucide-react";
 import { useState, useEffect } from "react";
 
 export default function ElderDashboard() {
@@ -212,6 +212,13 @@ export default function ElderDashboard() {
                 {/* Quick Actions */}
                 <section className="px-4 mt-6">
                     <h2 className="text-xl font-black text-gray-800 mb-4">Quick Access</h2>
+                    <div className="bg-gradient-to-r from-red-800 to-red-700 p-5 rounded-2xl shadow-xl mb-4 text-center font-extrabold text-white tracking-wide hover:opacity-90 transition cursor-pointer flex items-center justify-center gap-2 flex-col">
+                        <ShareIcon className="inline-block mr-2" size={24} />
+                        Share Screen
+                    </div>
+
+
+
                     <div className="grid grid-cols-2 gap-4">
                         {[
                             { tab: "medicines", icon: "💊", label: "Medicines", color: "emerald" },
